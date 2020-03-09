@@ -1,0 +1,22 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline: supervised_embeddings
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: KerasPolicy
+    featurizer:
+    - name: MaxHistoryTrackerFeaturizer
+      max_history: 4
+      state_featurizer:
+        - name: BinarySingleStateFeaturizer
+  - name: FallbackPolicy
+    nlu_threshold: 0.7
+    core_threshold: 0.5
+  - name: MemoizationPolicy
+  - name: MappingPolicy
+  - name: FormPolicy
+
+

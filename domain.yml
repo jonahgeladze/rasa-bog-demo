@@ -1,0 +1,197 @@
+actions:
+- utter_affirm
+- utter_anything_else
+- utter_ask_city
+- utter_ask_direction
+- utter_ask_initial_amount
+- utter_ask_loan_type
+- utter_currency
+- utter_default
+- utter_deny
+- utter_goodbye
+- utter_harassment
+- utter_hello
+- utter_help_message
+- utter_hope_i_helped
+- utter_info_about_savings_1
+- utter_info_about_savings_2
+- utter_service_centers_not_found
+- utter_tell_me_a_joke
+- utter_weather
+- utter_what_can_you_do
+- utter_who_are_you
+- utter_your_info_is_sent_to_call_center
+- utter_zodiac
+entities:
+- city
+- direction
+- initial_amount
+- loan
+- loan_type
+- saving
+forms:
+- info_about_loans_form
+- info_about_service_centers_form
+intents:
+- info_about_loans
+- thanks:
+    triggers: utter_feedback
+- what_can_you_do:
+    triggers: utter_what_can_you_do
+- hello:
+    triggers: utter_hello
+- harassment:
+    triggers: utter_harassment
+- currency:
+    triggers: utter_currency
+- tell_me_a_joke:
+    triggers: utter_tell_me_a_joke
+- info_about_service_centers
+- zodiac:
+    triggers: utter_zodiac
+- weather:
+    triggers: utter_weather
+- goodbye:
+    triggers: utter_goodbye
+- affirm:
+    triggers: utter_affirm
+- deny:
+    triggers: utter_deny
+- who_are_you:
+    triggers: utter_who_are_you
+- info_about_savings
+- out_of_scope:
+    triggers: utter_help_message
+responses:
+  utter_affirm:
+  - text: დიახ, რა თქმა უნდა 🚀🚀
+  utter_anything_else:
+  - text: სხვა რით შემიძლია თქვენი დახმარება
+  utter_ask_city:
+  - text: რომელ ქალაქში გაინტერესებთ?
+  utter_ask_direction:
+  - buttons:
+    - payload: სოლო
+      title: სოლო
+    - payload: WM
+      title: WM
+    - payload: ქსპრესი
+      title: ექსპრესი
+    - payload: საცალო
+      title: საცალო
+    text: რომელი მიმართულების ფილიალი გაინტერესებთ?
+  utter_ask_initial_amount:
+  - text: რა თანხით გსურთ სესხის აღება?
+  utter_ask_loan_type:
+  - buttons:
+    - payload: სამომხმარებლო
+      title: სამომხმარებლო
+    - payload: იპოთეკური
+      title: იპოთეკური
+    - payload: ავტო
+      title: ავტო
+    - payload: სტუდენტური
+      title: სტუდენტური
+    text: რა ტიპის სესხი გინდათ?
+  utter_currency:
+  - text: 'ვალუტის კურსებთან დაკავშირებულ საკითხებზე გირჩევთ რომ ეწვიოთ: https://nbg.ge,
+      ჩვენს ბანკში არსებული კომერციული კურსები შეგიძლიათ იხილოთ https://www.bog.ge-ზე.'
+  utter_default:
+  - text: "კარგად ვერ გავიგე როგორ დაგეხმაროთ, ქვემოთ იხილეთ თემები, რომელშიც შემიძლია დაგხმარება:"
+    buttons:
+    - payload: დეპოზიტები
+      title: დეპოზიტები
+    - payload: სესხები
+      title: სესხები
+    - payload: ვალუტის კურსი
+      title: ვალუტის კურსი
+    - payload: ფილიალებზე ინფორმაცია
+      title: ფილიალებზე ინფორმაცია
+  - text: შეგიძლიათ რომ სხვა ფორმულირებით მომწეროთ? ვერ გავიგე :(
+  utter_deny:
+  - text: არა
+  utter_goodbye:
+  - text: ნახვამდის
+  - text: დროებით
+  - text: შეხვედრამდე
+  utter_harassment:
+  - text: ძალიან გთხოვთ კორექტულად ვისაუბროთ
+  - text: თქვენგან მსგავსი მესიჯის მიღება ძალიან სამწუხაროა
+  - text: ჯობია თუ კორექტულად ვისაუბრებთ, მეც მეტად შევძლებ თქვენს დახმარებას
+  utter_hello:
+  - text: გამარჯობა, რით შემიძლია დაგეხმაროთ?
+  - text: გამარჯობა, მზად ვარ დაგეხმაროთ
+  - text: გამარჯობა ;)
+  utter_help_message:
+  - text: გაკავშირებთ ოპერატორთან
+  utter_hope_i_helped:
+  - text: იმედია დაგეხმარე
+  utter_info_about_savings_1:
+  - text: ძალიან მიხარია ჩემი ბანკის პროდუქტით რომ დაინტერესდი. www.bog.ge -ს თუ ეწვევი,
+      დეპოზიტების შესახებ ყველანაირ ინფორმაციას ამოიკითხავ.
+  utter_info_about_savings_2:
+  - text: 'და მაინც, თუ დაგრჩება შეკითხვა, ჩემი ბანკის სატელეფონო სერვისით ისარგებლე:
+      2 444 4444'
+  utter_service_centers_not_found:
+  - text: მოცემული ფილტრებით ფილიალი არ მოიძებნა 😔
+  utter_tell_me_a_joke:
+  - text: არსებობს ეფსილონი :)
+  - text: ხუმრობები ჩემი ძლიერი მხარე არ არის, ბანკის პროდუქტების გარკვევაში ხომ არ
+      დაგეხმარო? :)
+  utter_weather:
+  - image: https://www.fluentu.com/blog/italian/wp-content/uploads/sites/23/2018/07/italian-weather-expressions-1.jpg
+    text: ამინდის პროგნოზის მოძიებაში, მე ყოველთვის ვიყენებ https://accuweather.com,
+      მემგონი თქვენც დაგეხმარებათ. 🚀
+  utter_what_can_you_do:
+  - buttons:
+    - payload: დეპოზიტები
+      title: დეპოზიტები
+    - payload: სესხები
+      title: სესხები
+    - payload: ვალუტის კურსი
+      title: ვალუტის კურსი
+    - payload: ფილიალებზე ინფორმაცია
+      title: ფილიალებზე ინფორმაცია
+    text: 'მე შემიძლია მოგაწოდო ინფორმაცია შემდეგი თემების შესახებ:'
+  utter_who_are_you:
+  - text: მე ვარ საქართველოს ბანკის ბოტი
+  - text: მე ვარ თქვენი მეგობარი ბოტი
+  - text: მე ვარ თქვენი დამხმარე ბოტი, რომელსაც ძალიან უხარია თუ შეძლებს თქვენს დახმარებას
+  utter_your_info_is_sent_to_call_center:
+  - text: თქვენი მონაცემები გადაცემულია, მალე დაგიკავშირდებით.
+  utter_feedback:
+  - text: დაგეხმარე? :)
+  - text: შევძელი თქვენი დაკვალიანება?
+  - text: იმედია დაგეხმარე
+  utter_zodiac:
+  - image: https://media2.fdncms.com/illinoistimes/imager/u/original/11492392/26069.jpg
+    text: 'ზოდიაქოს შესახებ ყველანაირ ინფორმაციას მოიძიებთ შემდეგ მისამართზე: http://geoastro.ge/'
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  city:
+    type: text
+  direction:
+    type: categorical
+    values:
+    - ექსპრესი
+    - wm
+    - საცალო
+    - სოლო
+    - რითეილი
+  initial_amount:
+    type: text
+  loan:
+    type: text
+  loan_type:
+    type: categorical
+    values:
+    - სამომხმარებლო
+    - იპოთეკური
+    - ავტო
+    - სტუდენტური
+  requested_slot:
+    type: unfeaturized
+  saving:
+    type: text
